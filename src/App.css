@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color: rgb(13, 8, 7);
+}
+#div2{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(147, 143, 221);
+  
+}
+#div2{
+  border-radius: 10%;
+  padding: 5%;
+width: 350px;
+    height:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    border-style: double;
+    border-color: rgb(143, 250, 35);
+    border-width: 0.3cm;
+    transform:translate(-50%,-50%);
+    background-image: linear-gradient(27deg,hsla(0, 0%, 2%, 0.922) 50%,hsl(0, 0%, 2%) 50%);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12),0 1px px rgba(0,0,0,0.24);
+}
+button{
+  background-color: "rgb(143, 250, 35)" ;
+}
