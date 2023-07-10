@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
-// const ArrayOfObject = () => {
-//   const [students, setstudents] = useState([]);
-//   const deleteman = (index) => {
-//     // index =2
-//     let oldStudents = [...students];
-//     let newStudents = oldStudents.filter((v, i) => i !== index);
-//     setstudents(newStudents);
-//   };
+const ArrayOfObject = () => {
+  const [students, setstudents] = useState([]);
+  const deleteman = (index) => {
+    // index =2
+    let oldStudents = [...students];
+    let newStudents = oldStudents.filter((v, i) => i !== index);
+    setstudents(newStudents);
+  };
   const updateMan = (currentIndex, newName) => {
     const oldStudents = [...students];
     oldStudents[currentIndex].name = newName;
     setstudents(oldStudents);
   };
-  const updateBranch = (currentIndex, newBranch) => {
-    const oldStudents = [...students];
-    oldStudents[currentIndex].batch = newBranch;
-    setstudents(oldStudents);
-  };
+  // const updateBranch = (currentIndex, newBranch) => {
+  //   const oldStudents = [...students];
+  //   oldStudents[currentIndex].batch = newBranch;
+  //   setstudents(oldStudents);
+  // };
 
   const [studentName, setstudentName] = useState("");
   const [packagee, setpackagee] = useState("");
@@ -67,14 +67,17 @@ import React, { useState } from "react";
           <div key={i}>
             <ul>
               <li>Note title: {v.name} </li>
-              <li> note description: {v.batch} </li>
+              <li style={{ overflow: "scroll" }}>
+                {" "}
+                note description: {v.batch}{" "}
+              </li>
               <li> remarks: {v.package} </li>
               <button onClick={() => deleteman(i)} type="button">
                 Delete Me
               </button>
-              <button onClick={() => updateMan(i, "Ashutosh")} type="button">
+              {/* <button onClick={() => updateMan(i, "CSE")} type="button">
                 Update Me
-              </button>
+              </button> */}
               {/* <button onClick={() => updateBranch(i, "CSE")} type="button">
                 Update Branch
               </button> */}
@@ -84,8 +87,13 @@ import React, { useState } from "react";
       })}
     </>
   );
-// };
+};
 
 export default ArrayOfObject;
 
 // CRUD operation
+ 
+    // "@material-ui/core": "^4.12.4",
+    //     "@material-ui/icons": "^4.11.3",
+    //     "@mui/icons-material": "^5.13.7",
+    //     "@mui/material": "^5.13.7",
